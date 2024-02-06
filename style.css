@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    height: 100vh;
+    
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+    background: linear-gradient(to right,
+    rgba(30, 31, 29, 0.8),
+    rgba(231, 198, 12, 0)),
+    url(IMG_9920.jpg);
+    background-size:cover;
+}
+
+.gallery-item:nth-child(1){
+    transform: translateX(60px);
+    z-index: 3;
+}
+
+
+
+.gallery-item:nth-child(2){
+    z-index:  2; ;
+}
+
+.gallery-item:nth-child(3){
+transform: translateX(-40px);
+}
+
+.gallery-item{
+    width: 330px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0, 0, 0.6);
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+    border: 5px solid rgb(116, 214, 51);
+}
+
+.gallery-item:hover{
+    transform: scale(1.1);
+    transform: translate(0px,-60px);
+    z-index: 4;
+}
+
+
+.gallery-item:not(:hover){
+
+    filter: grayscale(100%);
+}
